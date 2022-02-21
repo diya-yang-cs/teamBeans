@@ -1,0 +1,6 @@
+[NAME=Player][SPEAKERSPRITE=Player]Oh man there's a monster whale right there!
+[NAME=Whale Kun][SPEAKERSPRITE=]Wait! I am not a monster, but a creature of your dream! I can help you get out of here!
+[NAME=Player][SPEAKERSPRITE=Player]Well, so what can you do?
+[NAME=Whale Kun][SPEAKERSPRITE=]I can direct you and help you with dream power management.
+[NAME=Whale Kun][SPEAKERSPRITE=]All you need to do is to collect all the dream power or weapon components and find the exit.
+[NAME=Whale Kun][SPEAKERSPRITE=]Just be aware of nightmares and avoid touching them. Let's go!
