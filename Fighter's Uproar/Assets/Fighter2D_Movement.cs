@@ -13,6 +13,10 @@ public class Fighter2D_Movement : MonoBehaviour
 
     public float distToGround = 1.0f;
     public LayerMask GroundLayer;
+    //PauseMenu pauseSystem = new PauseMenu();
+    //public PauseMenu pauseSystem;
+
+    public GameObject player, target;
 
     //Combat Variables
     public int fighterHealth = 10;
@@ -35,9 +39,12 @@ public class Fighter2D_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (pauseSystem.GetIsPaused()) { return; }
+        
         Move();
         Jump();
         Punch();
+
     }
 
     void Move()
@@ -48,15 +55,12 @@ public class Fighter2D_Movement : MonoBehaviour
 
         //PLAYER DIRECTION
         moveX = Input.GetAxis("Horizontal");
-        if (moveX < 0.0f)
-        {
+        Vector3 localPos = player.transform.InverseTransformPoint(target.transform.position);
+        if (localPos.x < 0)
             GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else if (moveX > 0.0f)
-        {
+        else
             GetComponent<SpriteRenderer>().flipX = false;
-        }
-        
+
         //Animations
         if (moveBy != 0)
         {
